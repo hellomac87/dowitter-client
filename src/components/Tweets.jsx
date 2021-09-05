@@ -18,8 +18,10 @@ const Tweets = memo(({ tweetService, username, addable }) => {
       .catch(onError);
   }, [tweetService, username, user]);
 
-  const onCreated = (tweet) => {
-    setTweets((tweets) => [tweet, ...tweets]);
+  const onCreated = (tweets) => {
+    // tweetService.onCreated(tweet);
+    setTweets([...tweets]);
+    
   };
 
   const onDelete = (tweetId) =>
