@@ -18,9 +18,9 @@ const Tweets = memo(({ tweetService, username, addable }) => {
       .catch(onError);
   }, [tweetService, username, user]);
 
-  const onCreated = (tweets) => {
+  const onCreated = (tweet) => {
     // tweetService.onCreated(tweet);
-    setTweets([...tweets]);
+    setTweets([tweet,...tweets]);
     
   };
 
